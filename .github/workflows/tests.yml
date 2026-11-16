@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        klipper: [31fe50ffa, master]
+        klipper: [31fe50ffa387ed4a45950c1043a3b214a9d554dd, master]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
