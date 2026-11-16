@@ -1,0 +1,16 @@
+name: Tests
+on: [push, pull_request]
+jobs:
+  unittest:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        klipper: [31fe50ffa, master]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: Klipper3d/klipper
+          ref: ${{ matrix.klipper }}
+          path: .native-klipper
+      - run: KLIPPER_PATH="$GITHUB_WORKSPACE/.native-klipper" python3 -m unittest discover -s tests -v

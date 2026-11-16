@@ -1,8 +1,8 @@
 # Implementation plan
 
-Status: deferred by the user. This repository currently contains work
-instructions only. Do not implement or install the extension as part of the
-Pandora2 standalone configuration migration.
+Status: implementation authorized on 2026-11-16 after the standalone migration.
+Execute inline using the executing-plans workflow. User approved the existing
+central contraction design and requested deployment to Pandora2.
 
 1. Add unittest cases for contraction on different printer sizes, two and three
    Z systems, invalid numeric input, actual native helper compatibility,
@@ -17,5 +17,5 @@ Pandora2 standalone configuration migration.
 5. Preserve Pandora2's original config in local Git. Install the extension and
    a local macro override, parse the config, restart only while idle, and verify
    ready state, registration, preview, original probe points and no motion.
-6. Commit verified work and create/push the requested public GitHub repository.
+6. Commit verified work and push a feature branch to the existing public repository.
    Physical leveling remains an attended hardware check.
